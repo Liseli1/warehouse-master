@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yeqifu.sys.mapper.AopMapper">
+    <insert id="insertLog" parameterType="com.yeqifu.sys.entity.SysLog">
+        insert into sys_log set
+        person=#{person},type=#{type},operatingtime=#{operatingtime}
+        ,result=#{result},indata=#{indata},ip=#{ip}
+    </insert>
+    <select id="listAllLog" resultType="com.yeqifu.sys.entity.SysLog">
+        select * from sys_log
+    </select>
+</mapper>
